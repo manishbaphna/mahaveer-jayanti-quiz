@@ -127,14 +127,14 @@
         </div>
         <div class="content-padding">
             <p>Test your knowledge about the life and teachings of the 24th Tirthankara.</p>
-            <p style="color: #888; font-size: 0.9rem;">10 Questions • 60 Seconds • Pure Knowledge</p>
+            <p style="color: #888; font-size: 0.9rem;">15 Questions • 90 Seconds • Pure Knowledge</p>
             <button class="btn-start" onclick="startQuiz()">Begin the Journey</button>
         </div>
     </div>
 
     <div id="quiz-screen" class="hidden content-padding">
-        <div class="timer" id="timer">Time: 60s</div>
-        <div id="progress" style="margin-bottom: 20px; font-weight: bold;">Question 1/10</div>
+        <div class="timer" id="timer">Time: 90s</div>
+        <div id="progress" style="margin-bottom: 20px; font-weight: bold;">Question 1/15</div>
         <h2 id="question-text" style="font-family: 'Lora', serif;"></h2>
         <div id="options-container" class="options-container"></div>
     </div>
@@ -142,7 +142,7 @@
     <div id="result-screen" class="hidden content-padding">
         <h1 style="color: var(--saffron)">Jai Jinendra!</h1>
         <p>You have successfully completed the quiz.</p>
-        <div class="score-box" id="score-display">0/10</div>
+        <div class="score-box" id="score-display">0/15</div>
         <button class="btn-start" onclick="showReview()">Review Answers</button>
         <button class="btn-start" style="background: #777; margin-top: 10px;" onclick="location.reload()">Play Again</button>
         
@@ -151,8 +151,9 @@
 </div>
 
 <script>
-    // EXPANDED QUESTION BANK (30 Questions)
+    // MERGED QUESTION BANK (Original + Document Questions)
     const questionBank = [
+        // --- Original Questions ---
         { q: "Where was Lord Mahaveer born?", a: ["Vaishali", "Pavapuri", "Ayodhya", "Kashi"], cor: 0 },
         { q: "What was Lord Mahaveer's childhood name?", a: ["Siddharth", "Vardhaman", "Rahul", "Mahavira"], cor: 1 },
         { q: "Who was the mother of Lord Mahaveer?", a: ["Trishala Mata", "Marudevi Mata", "Vama Devi", "Sunanda"], cor: 0 },
@@ -182,19 +183,42 @@
         { q: "Who performed the first Abhishek of Balvardhaman on Mount Meru?", a: ["King Siddhartha", "Indra Dev", "Trishala Mata", "Devas"], cor: 1 },
         { q: "The white-clad sect of Jainism is known as?", a: ["Digambar", "Shvetambar", "Sthanakvasi", "Terapanthi"], cor: 1 },
         { q: "The sky-clad (nude) sect of Jainism is known as?", a: ["Shvetambar", "Digambar", "Murtipujaka", "None"], cor: 1 },
-        { q: "What is the meaning of 'Asteya'?", a: ["Non-stealing", "Truth", "Non-violence", "Celibacy"], cor: 0 }
+        { q: "What is the meaning of 'Asteya'?", a: ["Non-stealing", "Truth", "Non-violence", "Celibacy"], cor: 0 },
+
+        // --- New Unique Questions from Document --- [cite: 1, 23, 31, 33, 35, 37, 44, 46, 73, 75, 77, 79, 81, 83, 85, 89, 100, 102, 104, 108, 110, 113, 119]
+        { q: "How many Indras celebrated the birth of Bhagwan Mahavir?", a: ["24", "64", "108", "52"], cor: 1 },
+        { q: "Why was Lord Mahaveer named 'Vardhman'?", a: ["Because of his great strength", "Because he was the last Tirthankara", "Because of the increase in kingdom's prosperity", "Because he was born in a palace"], cor: 2 },
+        { q: "What were the names of Lord Mahaveer's brother and sister?", a: ["Nandi Vardhan and Sudarshana", "Bharat and Bahubali", "Ram and Laxman", "None of these"], cor: 0 },
+        { q: "In which language did Lord Mahaveer primarily speak?", a: ["Sanskrit", "Hindi", "Prakrit", "Pali"], cor: 2 },
+        { q: "The flag of Jainism contains how many colors?", a: ["Three", "Seven", "Five", "Nine"], cor: 2 },
+        { q: "What is the common Jain greeting?", a: ["Namaste", "Jai Jinendra", "Pranam", "Jai Shree Krishna"], cor: 1 },
+        { q: "The Navkar Mantra has a total of how many lines (pads)?", a: ["5", "7", "108", "9"], cor: 3 },
+        { q: "Who are the five supreme spiritual beings (Panch Parmesthi)?", a: ["Arihant, Siddha, Acharya, Upadhyaya, Sadhu", "Brahma, Vishnu, Mahesh, Indra, Agni", "Rishabhdev, Parshvanath, Neminath, Mahavir, Ajitnath", "None of these"], cor: 0 },
+        { q: "What is the meaning of 'Arihant'?", a: ["A Great King", "Destroyer of inner enemies", "Creator of the World", "The First Teacher"], cor: 1 },
+        { q: "What is the primary purpose of reciting the Navkar Mantra?", a: ["To ask for boons", "To ask for wealth", "To pay respect to virtues and inspire self-improvement", "To defeat physical enemies"], cor: 2 },
+        { q: "Which festival is celebrated for asking forgiveness from all living beings?", a: ["Diwali", "Holi", "Paryushana (Samvatsari)", "Mahaveer Jayanti"], cor: 2 },
+        { q: "What main food category do Jains avoid to practice non-violence?", a: ["Fruits", "Grains", "Root vegetables (Potatoes, Onions)", "Milk products"], cor: 2 },
+        { q: "What is the practice of fasting for 24 hours called in Jainism?", a: ["Upavas", "Ekasana", "Ayambil", "Chauth"], cor: 0 },
+        { q: "Who was the very first Tirthankara of the current time cycle?", a: ["Mahavir", "Parshvanath", "Rishabhadeva (Adinath)", "Neminath"], cor: 2 },
+        { q: "What is the literal meaning of the word 'Paryushana'?", a: ["Fasting and praying", "Abiding and coming together", "Celebrating and dancing", "Walking and traveling"], cor: 1 },
+        { q: "Why is fasting considered important in Jainism?", a: ["To save food", "To shed karma and purify the soul", "To improve physical health only", "To follow a trend"], cor: 1 },
+        { q: "Why do Jains celebrate the festival of Diwali?", a: ["To celebrate the New Year", "To celebrate the birth of Mahavir", "To commemorate the Nirvana of Lord Mahavir", "To celebrate the victory of a King"], cor: 2 },
+        { q: "Who is the author of 'Nirukti', a key doctrine of Jainism?", a: ["Gautam Swami", "Bhadra bahu", "Hemchandracharya", "Kundakunda Swami"], cor: 1 },
+        { q: "What is the 'Kalpasutra' in Jainism?", a: ["A book of maps", "A text containing biographies of Tirthankaras", "A book of songs", "A book on medicine"], cor: 1 },
+        { q: "In the Swastika symbol, what do the four arms represent?", a: ["Four directions", "Four seasons", "Four states of existence", "Four Vedas"], cor: 2 },
+        { q: "What is the main focus of performing 'Aarti' in Jainism?", a: ["Asking for boons", "Symbolic devotion, gratitude, and purification", "Entertaining the devotees", "Lighting up the temple"], cor: 1 }
     ];
 
     let currentQuestions = [];
     let currentIndex = 0;
     let score = 0;
     let timer;
-    let timeLeft = 60;
+    let timeLeft = 90; // Increased to 90s for more questions
     let userAnswers = [];
 
     function startQuiz() {
-        // Randomize 10 questions from the 30 available
-        currentQuestions = questionBank.sort(() => 0.5 - Math.random()).slice(0, 10);
+        // Randomize 15 questions from the bank
+        currentQuestions = questionBank.sort(() => 0.5 - Math.random()).slice(0, 15);
         document.getElementById('start-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
         loadQuestion();
@@ -211,7 +235,7 @@
 
     function loadQuestion() {
         const qData = currentQuestions[currentIndex];
-        document.getElementById('progress').innerText = `Question ${currentIndex + 1} of 10`;
+        document.getElementById('progress').innerText = `Question ${currentIndex + 1} of 15`;
         document.getElementById('question-text').innerText = qData.q;
         const container = document.getElementById('options-container');
         container.innerHTML = '';
@@ -227,7 +251,7 @@
 
     function selectOption(index) {
         userAnswers[currentIndex] = index;
-        if (currentIndex < 9) {
+        if (currentIndex < 14) {
             currentIndex++;
             loadQuestion();
         } else {
@@ -244,7 +268,7 @@
         userAnswers.forEach((ans, i) => {
             if (ans === currentQuestions[i].cor) score++;
         });
-        document.getElementById('score-display').innerText = `${score}/10`;
+        document.getElementById('score-display').innerText = `${score}/15`;
     }
 
     function showReview() {

@@ -127,13 +127,13 @@
         </div>
         <div class="content-padding">
             <p>Test your knowledge about the life and teachings of the 24th Tirthankara.</p>
-            <p style="color: #888; font-size: 0.9rem;">15 Questions • 90 Seconds • Pure Knowledge</p>
+            <p style="color: #888; font-size: 0.9rem;">15 Questions • 120 Seconds • Pure Knowledge</p>
             <button class="btn-start" onclick="startQuiz()">Begin the Journey</button>
         </div>
     </div>
 
     <div id="quiz-screen" class="hidden content-padding">
-        <div class="timer" id="timer">Time: 90s</div>
+        <div class="timer" id="timer">Time: 120s</div>
         <div id="progress" style="margin-bottom: 20px; font-weight: bold;">Question 1/15</div>
         <h2 id="question-text" style="font-family: 'Lora', serif;"></h2>
         <div id="options-container" class="options-container"></div>
@@ -839,7 +839,7 @@
     let currentIndex = 0;
     let score = 0;
     let timer;
-    let timeLeft = 120; // Increased to 90s for more questions
+    let timeLeft = 120; // Increased to 120s for more questions
     let userAnswers = [];
 
     function startQuiz() {

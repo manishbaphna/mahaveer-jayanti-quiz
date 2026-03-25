@@ -153,67 +153,693 @@
 <script>
     // MERGED QUESTION BANK (Original + Document Questions)
     const questionBank = [
-        // --- Original Questions ---
-        { q: "Where was Lord Mahaveer born?", a: ["Vaishali", "Pavapuri", "Ayodhya", "Kashi"], cor: 0 },
-        { q: "What was Lord Mahaveer's childhood name?", a: ["Siddharth", "Vardhaman", "Rahul", "Mahavira"], cor: 1 },
-        { q: "Who was the mother of Lord Mahaveer?", a: ["Trishala Mata", "Marudevi Mata", "Vama Devi", "Sunanda"], cor: 0 },
-        { q: "What was the name of Lord Mahaveer's father?", a: ["King Siddhartha", "King Nabhi", "King Ashwasena", "King Shudhodana"], cor: 0 },
-        { q: "Lord Mahaveer was the ___ Tirthankara.", a: ["1st", "22nd", "23rd", "24th"], cor: 3 },
-        { q: "What is the symbol (Lanchan) of Lord Mahaveer?", a: ["Bull", "Elephant", "Snake", "Lion"], cor: 3 },
-        { q: "At what age did Lord Mahaveer renounce the world (Diksha)?", a: ["25", "30", "35", "40"], cor: 1 },
-        { q: "At what age did Lord Mahaveer attain Nirvana?", a: ["72", "80", "100", "120"], cor: 0 },
-        { q: "Lord Mahaveer attained Kevala Jnana under which tree?", a: ["Banyan", "Peepal", "Sal", "Mango"], cor: 2 },
-        { q: "Where did Lord Mahaveer attain Nirvana?", a: ["Sammed Shikharji", "Girnar", "Pavapuri", "Palitana"], cor: 2 },
-        { q: "Which of these is one of the 5 Great Vows (Mahavratas)?", a: ["Ahimsa", "Satya", "Asteya", "All of these"], cor: 3 },
-        { q: "What does 'Ahimsa' mean?", a: ["Truth", "Non-stealing", "Non-violence", "Celibacy"], cor: 2 },
-        { q: "What does 'Aparigraha' stand for?", a: ["Non-attachment", "Truth", "Non-violence", "Purity"], cor: 0 },
-        { q: "Who was the first Ganadhara (disciple) of Lord Mahaveer?", a: ["Gautam Swami", "Sudharma Swami", "Jambu Swami", "Bahubali"], cor: 0 },
-        { q: "In which state is the holy site of Pavapuri located?", a: ["Gujarat", "Rajasthan", "Bihar", "Uttar Pradesh"], cor: 2 },
-        { q: "Lord Mahaveer belonged to which royal dynasty?", a: ["Ikshvaku", "Maurya", "Gupta", "Kshatriya (Jnatrika)"], cor: 3 },
-        { q: "What is the name of Lord Mahaveer's daughter?", a: ["Priyadarsana", "Anoja", "Yashoda", "Both A & B"], cor: 3 },
-        { q: "How many years did Lord Mahaveer spend in deep meditation before enlightenment?", a: ["12 years", "6 years", "1 year", "30 years"], cor: 0 },
-        { q: "The term 'Jina' from which Jainism is derived means?", a: ["God", "The Conqueror", "The King", "The Teacher"], cor: 1 },
-        { q: "Which Tirthankara preceded Lord Mahaveer (23rd)?", a: ["Rishabhdev", "Parshvanath", "Neminath", "Adinath"], cor: 1 },
-        { q: "What is the primary holy scripture of Jainism?", a: ["Vedas", "Agamas", "Tripitakas", "Gita"], cor: 1 },
-        { q: "Mahaveer Jayanti falls in which month of the Hindu calendar?", a: ["Chaitra", "Vaisakh", "Kartik", "Magh"], cor: 0 },
-        { q: "Lord Mahaveer's first sermon was delivered at?", a: ["Vipulachala Hill", "Mount Abu", "Shatrunjay", "Sarnath"], cor: 0 },
-        { q: "The three jewels of Jainism are collectively known as?", a: ["Triratna", "Trideva", "Triveni", "Trishakti"], cor: 0 },
-        { q: "The Jain principle of 'Many-sidedness' of truth is called?", a: ["Anekantavada", "Syadvada", "Ahimsa", "Asteya"], cor: 0 },
-        { q: "At what time of day was Lord Mahaveer born?", a: ["Morning", "Noon", "Midnight", "Brahma Muhurta (Dawn)"], cor: 3 },
-        { q: "Who performed the first Abhishek of Balvardhaman on Mount Meru?", a: ["King Siddhartha", "Indra Dev", "Trishala Mata", "Devas"], cor: 1 },
-        { q: "The white-clad sect of Jainism is known as?", a: ["Digambar", "Shvetambar", "Sthanakvasi", "Terapanthi"], cor: 1 },
-        { q: "The sky-clad (nude) sect of Jainism is known as?", a: ["Shvetambar", "Digambar", "Murtipujaka", "None"], cor: 1 },
-        { q: "What is the meaning of 'Asteya'?", a: ["Non-stealing", "Truth", "Non-violence", "Celibacy"], cor: 0 },
-
-        // --- New Unique Questions from Document --- [cite: 1, 23, 31, 33, 35, 37, 44, 46, 73, 75, 77, 79, 81, 83, 85, 89, 100, 102, 104, 108, 110, 113, 119]
-        { q: "How many Indras celebrated the birth of Bhagwan Mahavir?", a: ["24", "64", "108", "52"], cor: 1 },
-        { q: "Why was Lord Mahaveer named 'Vardhman'?", a: ["Because of his great strength", "Because he was the last Tirthankara", "Because of the increase in kingdom's prosperity", "Because he was born in a palace"], cor: 2 },
-        { q: "What were the names of Lord Mahaveer's brother and sister?", a: ["Nandi Vardhan and Sudarshana", "Bharat and Bahubali", "Ram and Laxman", "None of these"], cor: 0 },
-        { q: "In which language did Lord Mahaveer primarily speak?", a: ["Sanskrit", "Hindi", "Prakrit", "Pali"], cor: 2 },
-        { q: "The flag of Jainism contains how many colors?", a: ["Three", "Seven", "Five", "Nine"], cor: 2 },
-        { q: "What is the common Jain greeting?", a: ["Namaste", "Jai Jinendra", "Pranam", "Jai Shree Krishna"], cor: 1 },
-        { q: "The Navkar Mantra has a total of how many lines (pads)?", a: ["5", "7", "108", "9"], cor: 3 },
-        { q: "Who are the five supreme spiritual beings (Panch Parmesthi)?", a: ["Arihant, Siddha, Acharya, Upadhyaya, Sadhu", "Brahma, Vishnu, Mahesh, Indra, Agni", "Rishabhdev, Parshvanath, Neminath, Mahavir, Ajitnath", "None of these"], cor: 0 },
-        { q: "What is the meaning of 'Arihant'?", a: ["A Great King", "Destroyer of inner enemies", "Creator of the World", "The First Teacher"], cor: 1 },
-        { q: "What is the primary purpose of reciting the Navkar Mantra?", a: ["To ask for boons", "To ask for wealth", "To pay respect to virtues and inspire self-improvement", "To defeat physical enemies"], cor: 2 },
-        { q: "Which festival is celebrated for asking forgiveness from all living beings?", a: ["Diwali", "Holi", "Paryushana (Samvatsari)", "Mahaveer Jayanti"], cor: 2 },
-        { q: "What main food category do Jains avoid to practice non-violence?", a: ["Fruits", "Grains", "Root vegetables (Potatoes, Onions)", "Milk products"], cor: 2 },
-        { q: "What is the practice of fasting for 24 hours called in Jainism?", a: ["Upavas", "Ekasana", "Ayambil", "Chauth"], cor: 0 },
-        { q: "Who was the very first Tirthankara of the current time cycle?", a: ["Mahavir", "Parshvanath", "Rishabhadeva (Adinath)", "Neminath"], cor: 2 },
-        { q: "What is the literal meaning of the word 'Paryushana'?", a: ["Fasting and praying", "Abiding and coming together", "Celebrating and dancing", "Walking and traveling"], cor: 1 },
-        { q: "Why is fasting considered important in Jainism?", a: ["To save food", "To shed karma and purify the soul", "To improve physical health only", "To follow a trend"], cor: 1 },
-        { q: "Why do Jains celebrate the festival of Diwali?", a: ["To celebrate the New Year", "To celebrate the birth of Mahavir", "To commemorate the Nirvana of Lord Mahavir", "To celebrate the victory of a King"], cor: 2 },
-        { q: "Who is the author of 'Nirukti', a key doctrine of Jainism?", a: ["Gautam Swami", "Bhadra bahu", "Hemchandracharya", "Kundakunda Swami"], cor: 1 },
-        { q: "What is the 'Kalpasutra' in Jainism?", a: ["A book of maps", "A text containing biographies of Tirthankaras", "A book of songs", "A book on medicine"], cor: 1 },
-        { q: "In the Swastika symbol, what do the four arms represent?", a: ["Four directions", "Four seasons", "Four states of existence", "Four Vedas"], cor: 2 },
-        { q: "What is the main focus of performing 'Aarti' in Jainism?", a: ["Asking for boons", "Symbolic devotion, gratitude, and purification", "Entertaining the devotees", "Lighting up the temple"], cor: 1 }
-    ];
+  {
+    "q": "Where was Lord Mahaveer born?",
+    "a": [
+      "Vaishali",
+      "Pavapuri",
+      "Ayodhya",
+      "Kashi"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "What was Lord Mahaveer's childhood name?",
+    "a": [
+      "Siddharth",
+      "Vardhaman",
+      "Rahul",
+      "Mahavira"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Who was the mother of Lord Mahaveer?",
+    "a": [
+      "Trishala Mata",
+      "Marudevi Mata",
+      "Vama Devi",
+      "Sunanda"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "What was the name of Lord Mahaveer's father?",
+    "a": [
+      "King Siddhartha",
+      "King Nabhi",
+      "King Ashwasena",
+      "King Shudhodana"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "Lord Mahaveer was the ___ Tirthankara.",
+    "a": [
+      "1st",
+      "22nd",
+      "23rd",
+      "24th"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "What is the symbol of Lord Mahaveer?",
+    "a": [
+      "Bull",
+      "Elephant",
+      "Snake",
+      "Lion"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "At what age did Lord Mahaveer renounce the world (Diksha)?",
+    "a": [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "At what age did Lord Mahaveer attain Nirvana?",
+    "a": [
+      "72",
+      "80",
+      "100",
+      "120"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "Lord Mahaveer attained Kevala Jnana under which tree?",
+    "a": [
+      "Banyan",
+      "Peepal",
+      "Sal",
+      "Mango"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Where did Lord Mahaveer attain Nirvana?",
+    "a": [
+      "Sammed Shikharji",
+      "Girnar",
+      "Pavapuri",
+      "Palitana"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Which of these is one of the 5 Great Vows (Mahavratas)?",
+    "a": [
+      "Ahimsa",
+      "Satya",
+      "Asteya",
+      "All of these"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "What does 'Ahimsa' mean?",
+    "a": [
+      "Truth",
+      "Non-stealing",
+      "Non-violence",
+      "Celibacy"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What does 'Aparigraha' stand for?",
+    "a": [
+      "Non-attachment",
+      "Truth",
+      "Non-violence",
+      "Purity"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "Who was the first Ganadhara (disciple) of Lord Mahaveer?",
+    "a": [
+      "Gautam Swami",
+      "Sudharma Swami",
+      "Jambu Swami",
+      "Bahubali"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "In which state is the holy site of Pavapuri located?",
+    "a": [
+      "Gujarat",
+      "Rajasthan",
+      "Bihar",
+      "Uttar Pradesh"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Lord Mahaveer belonged to which royal dynasty?",
+    "a": [
+      "Ikshvaku",
+      "Maurya",
+      "Gupta",
+      "Kshatriya (Jnatrika)"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "How many years did Lord Mahaveer spend in deep meditation before enlightenment?",
+    "a": [
+      "12 years",
+      "6 years",
+      "1 year",
+      "30 years"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "The term 'Jina' from which Jainism is derived means?",
+    "a": [
+      "God",
+      "The Conqueror",
+      "The King",
+      "The Teacher"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Which Tirthankara preceded Lord Mahaveer (23rd)?",
+    "a": [
+      "Rishabhdev",
+      "Parshvanath",
+      "Neminath",
+      "Adinath"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is the primary holy scripture of Jainism?",
+    "a": [
+      "Vedas",
+      "Agamas",
+      "Tripitakas",
+      "Gita"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Mahaveer Jayanti falls in which month of the Hindu calendar?",
+    "a": [
+      "Chaitra",
+      "Vaisakh",
+      "Kartik",
+      "Magh"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "Lord Mahaveer's first sermon was delivered at?",
+    "a": [
+      "Vipulachala Hill",
+      "Mount Abu",
+      "Shatrunjay",
+      "Sarnath"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "The three jewels of Jainism are collectively known as?",
+    "a": [
+      "Triratna",
+      "Trideva",
+      "Triveni",
+      "Trishakti"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "The Jain principle of 'Many-sidedness' of truth is called?",
+    "a": [
+      "Anekantavada",
+      "Syadvada",
+      "Ahimsa",
+      "Asteya"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "At what time of day was Lord Mahaveer born?",
+    "a": [
+      "Morning",
+      "Noon",
+      "Midnight",
+      "Brahma Muhurta (Dawn)"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "Who performed the first Abhishek of Balvardhaman on Mount Meru?",
+    "a": [
+      "King Siddhartha",
+      "Indra Dev",
+      "Trishala Mata",
+      "Devas"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is the meaning of 'Asteya'?",
+    "a": [
+      "Non-stealing",
+      "Truth",
+      "Non-violence",
+      "Celibacy"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "How many Indras celebrated the birth of Bhagwan Mahavir?",
+    "a": [
+      "24",
+      "64",
+      "108",
+      "52"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Why was Lord Mahaveer named 'Vardhman'?",
+    "a": [
+      "Because of his great strength",
+      "Because he was the last Tirthankara",
+      "Because of the increase in kingdom's prosperity",
+      "Because he was born in a palace"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "In which language did Lord Mahaveer primarily speak?",
+    "a": [
+      "Sanskrit",
+      "Hindi",
+      "Prakrit",
+      "Pali"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "The flag of Jainism contains how many colors?",
+    "a": [
+      "Three",
+      "Seven",
+      "Five",
+      "Nine"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the common Jain greeting?",
+    "a": [
+      "Namaste",
+      "Jai Jinendra",
+      "Pranam",
+      "Jai Shree Krishna"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Who are the five supreme spiritual beings (Panch Parmesthi)?",
+    "a": [
+      "Arihant, Siddha, Acharya, Upadhyaya, Sadhu",
+      "Brahma, Vishnu, Mahesh, Indra, Agni",
+      "Rishabhdev, Parshvanath, Neminath, Mahavir, Ajitnath",
+      "None of these"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "What is the meaning of 'Arihant'?",
+    "a": [
+      "A Great King",
+      "Destroyer of inner enemies",
+      "Creator of the World",
+      "The First Teacher"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is the primary purpose of reciting the Navkar Mantra?",
+    "a": [
+      "To ask for boons",
+      "To ask for wealth",
+      "To develop spiritual qualities",
+      "To defeat physical enemies"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Which festival is celebrated for asking forgiveness from all living beings?",
+    "a": [
+      "Diwali",
+      "Holi",
+      "Paryushana (Samvatsari)",
+      "Mahaveer Jayanti"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What main food category do Jains avoid to practice non-violence?",
+    "a": [
+      "Fruits",
+      "Grains",
+      "Root vegetables (Potatoes, Onions)",
+      "Milk products"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the practice of fasting for 24 hours called in Jainism?",
+    "a": [
+      "Upavas",
+      "Ekasana",
+      "Ayambil",
+      "Chauth"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "Who was the very first Tirthankara of the current time cycle?",
+    "a": [
+      "Mahavir",
+      "Parshvanath",
+      "Rishabhadeva (Adinath)",
+      "Neminath"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the literal meaning of the word 'Paryushana'?",
+    "a": [
+      "Fasting and praying",
+      "Abiding and coming together",
+      "Celebrating and dancing",
+      "Walking and traveling"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Why is fasting considered important in Jainism?",
+    "a": [
+      "To save food",
+      "To shed karma and purify the soul",
+      "To improve physical health only",
+      "To follow a trend"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Why do Jains celebrate the festival of Diwali?",
+    "a": [
+      "To celebrate the New Year",
+      "To celebrate the birth of Mahavir",
+      "To commemorate the Nirvana of Lord Mahavir",
+      "To celebrate the victory of a King"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the 'Kalpasutra' in Jainism?",
+    "a": [
+      "A book of maps",
+      "A text containing biographies of Tirthankaras",
+      "A book of songs",
+      "A book on medicine"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "In the Swastika symbol, what do the four arms represent?",
+    "a": [
+      "Four directions",
+      "Four seasons",
+      "Four states of existence",
+      "Four Vedas"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the main focus of performing 'Aarti' in Jainism?",
+    "a": [
+      "Asking for boons",
+      "Symbolic devotion, gratitude, and purification",
+      "Entertaining the devotees",
+      "Lighting up the temple"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What does “Namo” mean?",
+    "a": [
+      "Prayer",
+      "Worship",
+      "Bowing or respect",
+      "Peace"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Which of the following is NOT part of Panch Parmeshthi?",
+    "a": [
+      "Arihant",
+      "Siddha",
+      "Brahma",
+      "Acharya"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Which of the following is NOT part of Panch Parmeshthi?",
+    "a": [
+      "Arihant",
+      "Siddha",
+      "Brahma",
+      "Acharya"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the goal of life in Jainism?",
+    "a": [
+      "Heaven",
+      "Wealth",
+      "Moksha",
+      "Fame"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is “Karma” in Jainism?",
+    "a": [
+      "Action only",
+      "Physical work",
+      "Subtle particles that bind to the soul",
+      "Prayer"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What are the three jewels (Ratnatraya)?",
+    "a": [
+      "Faith, Knowledge, Conduct",
+      "Truth, Peace, Love",
+      "Dharma, Karma, Moksha",
+      "Study, Prayer, Charity"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "What is Samyak Darshan?",
+    "a": [
+      "Right knowledge",
+      "Right conduct",
+      "Right faith",
+      "Meditation"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is Samyak Jnana?",
+    "a": [
+      "Right conduct",
+      "Right knowledge",
+      "Right faith",
+      "Renunciation"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is Samyak Charitra?",
+    "a": [
+      "Right conduct",
+      "Right speech",
+      "Right belief",
+      "Right prayer"
+    ],
+    "cor": 0
+  },
+  {
+    "q": "What is the Navkar Mantra?",
+    "a": [
+      "A story",
+      "A law",
+      "A universal prayer",
+      "A festival"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "How many Parmeshthi are there?",
+    "a": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Who are Arihants?",
+    "a": [
+      "Ordinary people",
+      "Enlightened beings with body",
+      "Kings",
+      "Teachers only"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Who are Siddhas?",
+    "a": [
+      "Teachers",
+      "Monks",
+      "Liberated souls",
+      "Students"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the role of Acharya?",
+    "a": [
+      "Farming",
+      "Leading monks",
+      "Trading",
+      "Writing stories"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What do Upadhyayas do?",
+    "a": [
+      "Rule kingdoms",
+      "Teach scriptures",
+      "Build temples",
+      "Travel only"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Who are Sadhus?",
+    "a": [
+      "Soldiers",
+      "Monks practicing discipline",
+      "Kings",
+      "Farmers"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is Jain meditation called?",
+    "a": [
+      "Yoga",
+      "Samayika",
+      "Puja",
+      "Arti"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What type of karma obscures true knowledge?",
+    "a": [
+      "Darshanavarniya Karma",
+      "Mohaniya Karma",
+      "Jnanavarniya Karma",
+      "Antaraya Karma"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "Which vow involves limiting possessions?",
+    "a": [
+      "Satya",
+      "Asteya",
+      "Brahmacharya",
+      "Aparigraha"
+    ],
+    "cor": 3
+  },
+  {
+    "q": "What is the function of Mohaniya Karma?",
+    "a": [
+      "Obstructs energy",
+      "Deludes the soul",
+      "Obscures knowledge",
+      "Obscures perception"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "Which Tirthankara is associated with a serpent hood?",
+    "a": [
+      "Mahavira",
+      "Rishabhanatha",
+      "Parshvanatha",
+      "Neminatha"
+    ],
+    "cor": 2
+  },
+  {
+    "q": "What is the nature of the soul (Jiva) in Jainism?",
+    "a": [
+      "Material",
+      "Eternal and conscious",
+      "Temporary",
+      "Created by God"
+    ],
+    "cor": 1
+  },
+  {
+    "q": "What is the universe (Loka) in Jainism considered to be?",
+    "a": [
+      "Created by God",
+      "Eternal and uncreated",
+      "Temporary",
+      "Imaginary"
+    ],
+    "cor": 1
+  }
+];
 
     let currentQuestions = [];
     let currentIndex = 0;
     let score = 0;
     let timer;
-    let timeLeft = 90; // Increased to 90s for more questions
+    let timeLeft = 120; // Increased to 90s for more questions
     let userAnswers = [];
 
     function startQuiz() {
